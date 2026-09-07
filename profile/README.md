@@ -16,6 +16,7 @@ Home Server Project builds on:
 
 - [Fedora CoreOS](https://github.com/coreos/fedora-coreos-tracker) — the immutable, automatically updating Fedora CoreOS platform.
 - [Universal Blue uCore](https://github.com/ublue-os/ucore) — server-focused images built on Fedora CoreOS.
+- [AlmaLinux](https://github.com/AlmaLinux) — the conservative enterprise foundation for the upcoming Home Server Alma bootc path.
 
 The underlying operating system, kernel, bootc stack, container stack, virtualization stack, storage stack, drivers, and core platform engineering remain upstream.
 
@@ -87,6 +88,34 @@ Repository:
 https://github.com/home-server-project/home-server-ucore-builder
 
 The Builder uses the latest published Installer release, embeds the user's public SSH key, and leaves the operating-system image choice inside the installer.
+
+## Coming soon: Home Server Alma
+
+### Home Server Alma
+
+A more conservative, enterprise-oriented immutable home-server option based on AlmaLinux 10 and `bootc`.
+
+Home Server Alma is intended for users who prefer a slower-moving, RHEL-compatible platform while keeping the same Home Server Project principles:
+
+- immutable / image-based host
+- Podman + Quadlets
+- small host-side administration layer
+- regular and HCI variants
+- signed container images
+
+The project is currently in active development and VM testing. It is **not production-ready yet**.
+
+Repository:
+https://github.com/home-server-project/home-server-alma
+
+### Home Server Alma ISO
+
+A dedicated installation-media project for Home Server Alma.
+
+This repository is currently empty and will be developed once the Alma image path is ready for installer work.
+
+Repository:
+https://github.com/home-server-project/home-server-alma-iso
 
 ## Planned projects
 
