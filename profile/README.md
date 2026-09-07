@@ -60,7 +60,7 @@ The goal is to provide a friendly way to generate and manage customizable Quadle
 
 A future direction may also include assistance with translating Docker Compose configurations into Quadlets, but that is not part of the initial scope.
 
-## Current projects
+## Home Server uCore
 
 ### Home Server uCore
 
