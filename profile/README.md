@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../logo/banner-navy-mid.png" alt="Home Server Project banner">
+</p>
+
 # Home Server Project
 
 **Cloud-native technology, brought home.**
@@ -23,17 +27,27 @@ Home Server Project focuses on the home-server experience around those foundatio
 
 Create personalized installation media for your own server.
 
-The planned Home Server Builder is designed as a reusable GitHub template rather than a central ISO factory. A user will be able to use the template from their own GitHub account, provide their own choices and public SSH key, and build personalized installation media for their own needs.
+[Home Server uCore Builder](https://github.com/home-server-project/home-server-ucore-builder) is a reusable GitHub template rather than a central ISO factory. A user creates a repository from the template in their own GitHub account, adds one `SSH_PUBLIC_KEY` Actions secret, and runs the build workflow.
 
-The same template can be reused later to build another ISO with a different image, SSH key, or supported configuration.
+The Builder automatically resolves the **latest published Home Server Installer release**, builds from that exact release, and produces a personalized Fedora CoreOS-based installer ISO containing the user's public SSH key.
+
+The Builder does not choose or embed a uCore operating-system image. The finished installer still presents all five supported V1 image choices, and the selected image is downloaded during installation.
 
 ### Install
 
 Turn the installation media into a working machine.
 
-Home Server Installer is the installation engine. It is being developed to provide a safer and more understandable path for installing supported bootc-based server images on real hardware.
+[Home Server Installer](https://github.com/home-server-project/home-server-installer) is the interactive installation engine. **V1 is released**, with [`v1.0.0`](https://github.com/home-server-project/home-server-installer/releases/tag/v1.0.0) providing the current direct uCore installation path.
 
-The project is intended to support Fedora CoreOS, uCore variants, Home Server uCore images, and compatible user-provided images as those paths are tested and validated.
+The V1 installer presents five supported installation targets:
+
+- Home Server uCore LTS
+- Home Server uCore HCI LTS
+- uCore Minimal LTS
+- uCore LTS
+- uCore HCI LTS
+
+The installer provides target-disk selection, selectable 1 GiB / 2 GiB `/boot` layouts, local user/password setup, and SSH-key configuration while keeping the underlying uCore and Fedora CoreOS model visible to the user.
 
 ### Deploy
 
@@ -58,20 +72,23 @@ The project intentionally keeps the custom layer small. Applications that natura
 
 ### Home Server Installer
 
-A friendly installation engine for bootc-based home servers.
+A friendly interactive installation engine for Home Server and upstream uCore images.
 
 Repository:
 https://github.com/home-server-project/home-server-installer
 
-The installer is currently alpha software and is being developed and tested around an explicit, safety-first installation flow.
+Current release: [`v1.0.0`](https://github.com/home-server-project/home-server-installer/releases/tag/v1.0.0)
+
+### Home Server uCore Builder
+
+A GitHub template for building a personalized Home Server Installer ISO in the user's own GitHub account.
+
+Repository:
+https://github.com/home-server-project/home-server-ucore-builder
+
+The Builder uses the latest published Installer release, embeds the user's public SSH key, and leaves the operating-system image choice inside the installer.
 
 ## Planned projects
-
-### Home Server Builder
-
-Status: in development.
-
-The Builder will be published as a GitHub template containing the workflows, configuration, and supporting logic needed for users to build their own personalized installation media in their own GitHub account.
 
 ### Home Server Deployer
 
