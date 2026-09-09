@@ -38,13 +38,13 @@ Universal Blue and Fedora CoreOS provide the substantial operating-system, kerne
 
 [Home Server Gina](https://github.com/home-server-project/home-server-gina) is a thin downstream layer built on Universal Blue uCore LTS.
 
-Gina keeps the upstream Fedora CoreOS/uCore foundation and adds a deliberately small set of home-server administration, diagnostics, UPS and convenience tools. Gina and Gina HCI are available through Home Server Installer alongside the upstream uCore choices.
+Gina keeps the upstream Fedora CoreOS/uCore foundation and adds a deliberately small set of home-server administration, diagnostics, UPS and convenience tools. Third-party software that needs custom packaging is consumed as verified RPMs from [Home Server Packages](https://github.com/home-server-project/home-server-packages). Gina and Gina HCI are available through Home Server Installer alongside the upstream uCore choices.
 
 ### Home Server Rose
 
 [Home Server Rose](https://github.com/home-server-project/home-server-rose) uses a different foundation: AlmaLinux OS 10 and the Enterprise Linux ecosystem.
 
-Rose follows the same Home Server Project philosophy but takes the more conservative path, with a slower-moving base and a broader built-in home-server tooling layer. AlmaLinux provides the core Enterprise Linux operating-system foundation; Home Server Project adds the Rose bootc image composition, home-server tooling, configuration and release pipeline.
+Rose follows the same Home Server Project philosophy but takes the more conservative path, with a slower-moving base and a broader built-in home-server tooling layer. AlmaLinux provides the core Enterprise Linux operating-system foundation; Home Server Project adds the Rose bootc image composition, home-server tooling, configuration and release pipeline. Third-party software that needs custom packaging is consumed as verified RPMs from [Home Server Packages](https://github.com/home-server-project/home-server-packages).
 
 Rose will use its own dedicated installation-media path through [Home Server Rose ISO](https://github.com/home-server-project/home-server-rose-iso). That repository exists but is not implemented yet.
 
