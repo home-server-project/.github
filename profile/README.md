@@ -30,7 +30,7 @@ Home Server Project does not require users to choose a Home Server Project opera
 
 [Universal Blue uCore](https://github.com/ublue-os/ucore) provides practical server and HCI images built on Fedora CoreOS. It is also the upstream foundation used by Home Server Gina.
 
-Home Server Installer can install upstream uCore directly, including **uCore Minimal LTS**, **uCore LTS** and **uCore HCI LTS**. Users who want the upstream experience without the Home Server Project additions can choose it directly.
+Home Server Installer can install upstream uCore directly, including regular **uCore Minimal LTS**, **uCore LTS** and **uCore HCI LTS**, plus matching **NVIDIA Open** and **NVIDIA LTS** variants. Users who want the upstream experience without the Home Server Project additions can choose it directly.
 
 Universal Blue and Fedora CoreOS provide the substantial operating-system, kernel, container, storage, virtualization and image-platform engineering underneath this path. Home Server Project does not replace that work.
 
@@ -62,13 +62,31 @@ The Builder embeds the user's **public SSH key** and builds the Installer media.
 
 [Home Server Installer](https://github.com/home-server-project/home-server-installer) is the interactive installation engine for the Gina/uCore path.
 
-The current Installer presents five signed LTS choices:
+The current Installer supports **11 signed LTS installation targets across four families**.
 
+<details>
+<summary><strong>Show installer choices</strong></summary>
+
+### Home Server Gina LTS
 - Home Server Gina LTS
 - Home Server Gina HCI LTS
+
+### Universal Blue uCore LTS
 - uCore Minimal LTS
 - uCore LTS
 - uCore HCI LTS
+
+### Universal Blue uCore LTS / NVIDIA Open
+- uCore Minimal LTS NVIDIA Open
+- uCore LTS NVIDIA Open
+- uCore HCI LTS NVIDIA Open
+
+### Universal Blue uCore LTS / NVIDIA LTS
+- uCore Minimal LTS NVIDIA LTS
+- uCore LTS NVIDIA LTS
+- uCore HCI LTS NVIDIA LTS
+
+</details>
 
 The selected image is downloaded during installation. The Installer handles target-disk selection, storage layout, user setup, SSH configuration, image verification and direct installation so the user does not need to prepare Ignition or manually assemble a CoreOS installation path.
 
