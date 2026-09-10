@@ -54,41 +54,20 @@ Gina and Rose are not intended to compete as "better" and "worse" options. They 
 
 ### Build
 
-[Home Server Gina Builder](https://github.com/home-server-project/home-server-gina-builder) is the normal user path for creating a personalized bootable Home Server Installer ISO in the user's own GitHub account.
+For the Gina/uCore installation path, there are two ways to get installation media:
 
-The Builder embeds the user's **public SSH key** and builds the Installer media. It does not embed one operating-system image into the ISO.
+- **Generic Installer ISO** — download the latest ready-to-use ISO from [Home Server Installer releases](https://github.com/home-server-project/home-server-installer/releases/latest).
+- **Personalized Builder ISO** — use [Home Server Gina Builder](https://github.com/home-server-project/home-server-gina-builder) to create fresh installation media with your SSH public key already embedded.
+
+Both use the current published Home Server Installer release. The selected operating-system image is not embedded in the ISO; it is chosen and downloaded during installation.
 
 ### Install
 
 [Home Server Installer](https://github.com/home-server-project/home-server-installer) is the interactive installation engine for the Gina/uCore path.
 
-The current Installer supports **11 signed LTS installation targets across four families**.
+It handles target-disk selection, storage layout, user setup, SSH configuration, image verification and direct installation so the user does not need to prepare Ignition or manually assemble a CoreOS installation path.
 
-<details>
-<summary><strong>Show installer choices</strong></summary>
-
-### Home Server Gina LTS
-- Home Server Gina LTS
-- Home Server Gina HCI LTS
-
-### Universal Blue uCore LTS
-- uCore Minimal LTS
-- uCore LTS
-- uCore HCI LTS
-
-### Universal Blue uCore LTS / NVIDIA Open
-- uCore Minimal LTS NVIDIA Open
-- uCore LTS NVIDIA Open
-- uCore HCI LTS NVIDIA Open
-
-### Universal Blue uCore LTS / NVIDIA LTS
-- uCore Minimal LTS NVIDIA LTS
-- uCore LTS NVIDIA LTS
-- uCore HCI LTS NVIDIA LTS
-
-</details>
-
-The selected image is downloaded during installation. The Installer handles target-disk selection, storage layout, user setup, SSH configuration, image verification and direct installation so the user does not need to prepare Ignition or manually assemble a CoreOS installation path.
+The Installer supports signed Home Server Gina and selected upstream Universal Blue uCore LTS images, including NVIDIA variants. See the [Home Server Installer README](https://github.com/home-server-project/home-server-installer) for the current complete installation-target list and installation requirements.
 
 Rose will follow a separate dedicated ISO path rather than being added to the Gina/uCore Installer menu.
 
@@ -102,8 +81,8 @@ Its goal is an optional, friendly management layer for native Podman Quadlets wi
 
 - [Home Server Gina](https://github.com/home-server-project/home-server-gina) — Fedora CoreOS + Universal Blue uCore LTS foundation with a thin Home Server Project layer.
 - [Home Server Rose](https://github.com/home-server-project/home-server-rose) — AlmaLinux OS 10 / Enterprise Linux foundation with a broader Home Server Project server layer.
-- [Home Server Gina Builder](https://github.com/home-server-project/home-server-gina-builder) — GitHub template for creating a personalized Home Server Installer ISO.
-- [Home Server Installer](https://github.com/home-server-project/home-server-installer) — interactive direct installer for Gina and selected upstream uCore LTS images.
+- [Home Server Installer](https://github.com/home-server-project/home-server-installer) — interactive installer for Gina and selected upstream uCore LTS images, with a ready-to-use generic installation ISO published with each release.
+- [Home Server Gina Builder](https://github.com/home-server-project/home-server-gina-builder) — GitHub template for creating a personalized Home Server Installer ISO with your SSH public key embedded.
 - [Home Server Rose ISO](https://github.com/home-server-project/home-server-rose-iso) — dedicated Rose installation-media project; repository created, implementation still to come.
 - [Home Server Deployer](https://github.com/home-server-project/home-server-deployer) — early Alpha manager for native Podman Quadlets.
 
